@@ -15,4 +15,9 @@ public class PersonnelController {
     public Personnel ajouterPersonnelEtAffecterARayon(@RequestBody Personnel personnel, @PathVariable("idRayon")String idRayon){
         return personnelService.ajouterPersonnelEtAffecterARayon(personnel,idRayon);
     }
+
+    @PutMapping("desaffecterPersonnelDuRayon/{idPersonnel}")
+    public void desaffecterPersonnelDuRayon(@PathVariable("idPersonnel") Long idPersonnel){
+        personnelService.desaffecterPersonnelDuRayon(idPersonnel);
+    }
 }
